@@ -13,12 +13,14 @@ function Start () {
 public function getData(){
 	return data;
 }
+public function playerSelected(type:int){
+	data['playerSelected'] = type;
+}
 function InitializeObj(){
-	var obj = {
+	data = {
 		'difficulty':0,
-		'playerSelected':'heavy',
+		'playerSelected':0,
 		'credits':100,
 		'playerName':"Bombasto"
 	};
-	data=obj;
 }
