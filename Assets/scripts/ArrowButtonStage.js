@@ -21,7 +21,8 @@ function OnMouseDown () {
     if(code == controlPadScript.getCode() && controlPadScript.getStatusArrow() == 1 && !controlPadScript.isBlock()){
         controlPadScript.setBlock(true);
         playerScript.addScore(1);
-		//reproducir ok
+		playerScript.changeSprite(2);
+		restartSkin();
 
     }else if(!controlPadScript.isBlock()){
         controlPadScript.setBlock(true);
@@ -33,6 +34,13 @@ function OnMouseDown () {
         }else{
             playerScript.addScore(-1);
         }
+		playerScript.changeSprite(0);
+		restartSkin();
 		//reproducir fallo
     }
+}
+
+function restartSkin(){
+	yield WaitForSeconds(0.2);
+	playerScript.changeSprite(1);
 }

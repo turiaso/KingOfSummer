@@ -42,6 +42,8 @@ function OnGUI() {
         if(code == controlPadScript.getCode() && controlPadScript.getStatusArrow() == 1 && !controlPadScript.isBlock()){
             controlPadScript.setBlock(true);
             playerScript.addScore(1);
+			playerScript.changeSprite(2);
+			restartSkin();			
         }else{
             controlPadScript.setBlock(true);
             var score = playerScript.getScore();
@@ -52,6 +54,13 @@ function OnGUI() {
             }else{
                 playerScript.addScore(-1);
             }
+			playerScript.changeSprite(0);
+			restartSkin();
         }
     }
+}
+
+function restartSkin(){
+	yield WaitForSeconds(0.2);
+	playerScript.changeSprite(1);
 }

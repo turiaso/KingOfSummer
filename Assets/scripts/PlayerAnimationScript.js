@@ -5,10 +5,9 @@ private var counterTime = 0;
 private var timeToChange = 333;
 private var status =0;
 private var script:CommunicationAmongScenesScript;
-public var type :int=0;
+public var type :int;
 function Start () {
 	script =  GameObject.Find("GameData").GetComponent(CommunicationAmongScenesScript);
-	Debug.Log(script);
 }
 
 function Update () {
