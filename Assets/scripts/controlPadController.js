@@ -1,22 +1,22 @@
 ﻿#pragma strict
-
 private var timePast = 0;
 private var index = 0;
 private var notas = [0,1,2,3,0,1,2,3,0,1,1,1,1,2,2,1,1,3,1,3,1,2,0];
 private var timeToChange = 1000;
 private var timeLigth = 100;
-
+var data;
 public var goList:GameObject[];
 
 function Start () {
-	
+	 data =  GameObject.Find("GameData").GetComponent(CommunicationAmongScenesScript).getData();
+
 }
 
 function Update () {
 	timePast += Time.deltaTime*1000;	
 	var bs = goList[notas[index]].GetComponent(buttonScript);
 	
-	Debug.Log(index);
+	Debug.Log(data);
 	if(bs.getStatus() == 0){
 		if (timePast>timeToChange) {
 			bs.changeSprite();			
