@@ -17,7 +17,7 @@ function InitializeObj(){
 	var obj = {
 		'difficulty':0,
 		'playerSelected':'heavy',
-		'score':0,
+		'credits':100,
 		'playerName':"Bombasto"
 	};
 	data=obj;

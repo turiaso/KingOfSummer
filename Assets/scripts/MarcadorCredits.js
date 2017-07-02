@@ -5,9 +5,9 @@ private var text:UnityEngine.UI.Text;
 
 function Start () {
     text = GetComponent(UnityEngine.UI.Text);
-    text.text = "Score: " + player.GetComponent(Player).score;
+    text.text = "Credits: " + player.GetComponent(Player).credits;
 }
 
 function Update () {
-    text.text = "Score: " + player.GetComponent(Player).score;
+    text.text = "Credits: " + player.GetComponent(Player).credits;
 }
