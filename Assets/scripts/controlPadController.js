@@ -7,8 +7,11 @@ private var timeToChange = 2000;
 private var timeLigth = 1000;
 private var block = false;
 public var goList:GameObject[];
-
+private var audioTrack:AudioSource; 
 function Start () {	
+	audioTrack = GetComponent.<AudioSource>();
+	audioTrack.Play();
+	audioTrack.Play(44100);
 }
 
 function Update () {

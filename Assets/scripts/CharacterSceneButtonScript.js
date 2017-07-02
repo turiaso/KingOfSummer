@@ -1,7 +1,9 @@
 ﻿#pragma strict
 private var audioLoaded:AudioSource; 
+var MainSoundTrack;
 function Start () {
 	audioLoaded = GetComponent.<AudioSource>();
+	MainSoundTrack = GameObject.Find("MainSoundTrack");
 }
 
 function Update () {
@@ -18,5 +20,7 @@ function OnMouseDown () {
 	audioLoaded.Play();
 	audioLoaded.Play(44100);
 	loadScene();
+	Destroy (MainSoundTrack);
+
 }
 
