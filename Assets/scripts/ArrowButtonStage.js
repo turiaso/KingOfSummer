@@ -4,6 +4,7 @@ public var code:int;
 public var controlPad:GameObject;
 public var player:GameObject;
 
+
 private var controlPadScript:controlPadController;
 private var playerScript:Player;
 
@@ -20,6 +21,8 @@ function OnMouseDown () {
     if(code == controlPadScript.getCode() && controlPadScript.getStatusArrow() == 1 && !controlPadScript.isBlock()){
         controlPadScript.setBlock(true);
         playerScript.addScore(1);
+		//reproducir ok
+
     }else if(!controlPadScript.isBlock()){
         controlPadScript.setBlock(true);
         var score = playerScript.getScore();
@@ -30,5 +33,6 @@ function OnMouseDown () {
         }else{
             playerScript.addScore(-1);
         }
+		//reproducir fallo
     }
 }
