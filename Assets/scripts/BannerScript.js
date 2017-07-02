@@ -1,6 +1,5 @@
 ﻿#pragma strict
 
-var ls:UnityEngine.SceneManagement.SceneManager;
 private var rb: Rigidbody2D;
 
 private var timeOnFly = 0;
@@ -19,7 +18,7 @@ function Update () {
     }
 
 	if(transform.position.y<-5){
-		ls.LoadScene("MainScene");
+	    UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
 	}
 }
 function OnMouseDown () {  
