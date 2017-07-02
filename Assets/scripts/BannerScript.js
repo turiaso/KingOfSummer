@@ -35,5 +35,5 @@ function OnCollisionEnter2D(collision: Collision2D) {
     var contact : ContactPoint2D = collision.contacts[0];    
     var force = transform.position -contact.point;
     force.y = 0;
-    rb.AddForce((force)*5, ForceMode2D.Impulse);
+    rb.AddForce(force, ForceMode2D.Impulse);
 }
