@@ -18,7 +18,11 @@ function Start () {
 	}else{
 		mySprites = sprites2;
 	}
+	try{
 	GetComponent(SpriteRenderer).sprite = mySprites[1];
+	}catch(ex){
+	
+	}
 }
 
 function Update () {
