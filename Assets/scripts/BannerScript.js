@@ -25,7 +25,6 @@ function Update () {
 function OnMouseDown () {  
     //Para que funcione esta funcion hace falta añadir un collider
     //calculo vecor al centro del objeto para aplicar una fuerza en direccion opuesta
-    var hit : RaycastHit;
     var clickedPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     var forceVector = transform.position - clickedPosition;
     forceVector.y = 1;
