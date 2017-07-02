@@ -3,8 +3,8 @@
 private var timePast = 0;
 private var index = 0;
 private var notas = [0,1,2,3,0,1,2,3,0,1,1,1,1,2,2,1,1,3,1,3,1,2,0];
-private var timeToChange = 1000;
-private var timeLigth = 100;
+private var timeToChange = 2000;
+private var timeLigth = 500;
 
 public var goList:GameObject[];
 
